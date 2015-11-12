@@ -1,0 +1,2 @@
+com/intel/kotlinrssreader/Main
+com/intel/kotlinrssreader/RSSCell
