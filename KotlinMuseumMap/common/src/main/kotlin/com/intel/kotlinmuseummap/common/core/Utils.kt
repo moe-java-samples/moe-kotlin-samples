@@ -90,22 +90,22 @@ object Utils {
         val museums = ArrayList<Museum>()
 
         var results = gson.fromJson(text, Map::class.java)
-        var listMuseum = results.getRaw("results") as ArrayList<*>
+        var listMuseum = results.get("results") as ArrayList<*>
 
         for (i in 0..listMuseum.size - 1) {
             var node: LinkedTreeMap<*, *>? = listMuseum[i] as LinkedTreeMap<*, *>? ?: break
 
-            var name :String = node!!.getRaw("name") as String
+            var name :String = node!!.get("name") as String
 
             if (name == null)
                 name = "Unknown"
 
-            node = node.getRaw("geometry") as LinkedTreeMap<*, *>?
+            node = node.get("geometry") as LinkedTreeMap<*, *>?
             if (node == null) break
-            node = node.getRaw("location") as LinkedTreeMap<*, *>?
+            node = node.get("location") as LinkedTreeMap<*, *>?
             if (node == null) break
-            val lat = node.getRaw("lat") as Double
-            val lng = node.getRaw("lng") as Double
+            val lat = node.get("lat") as Double
+            val lng = node.get("lng") as Double
             museums.add(Museum(name, lat, lng))
         }
 

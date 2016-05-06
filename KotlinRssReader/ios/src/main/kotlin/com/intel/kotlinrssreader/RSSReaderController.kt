@@ -29,9 +29,9 @@
 
 package com.intel.kotlinrssreader
 
-import com.intel.inde.moe.natj.general.Pointer
-import com.intel.inde.moe.natj.objc.SEL
-import com.intel.inde.moe.natj.objc.ann.Selector
+import com.intel.moe.natj.general.Pointer
+import com.intel.moe.natj.objc.SEL
+import com.intel.moe.natj.objc.ann.Selector
 import com.intel.kotlinrssreader.common.Bookmarks
 import com.intel.kotlinrssreader.common.RSSFeed
 import com.intel.kotlinrssreader.common.RSSFeedItem

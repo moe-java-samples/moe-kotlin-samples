@@ -34,7 +34,7 @@ class AndroidSQLiteDatabaseHelper(ctx: Context, dbName: String) : ISQLiteDatabas
 
     }
 
-    internal var dbH: DBOpenHelper
+    private var dbH: DBOpenHelper
 
     init {
         dbH = DBOpenHelper(ctx, dbName, null, 2)

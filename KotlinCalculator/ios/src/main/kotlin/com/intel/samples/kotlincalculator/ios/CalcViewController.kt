@@ -29,12 +29,12 @@
 
 package com.intel.samples.kotlincalculator.ios
 
-import com.intel.inde.moe.natj.general.Pointer
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup
-import com.intel.inde.moe.natj.objc.ObjCRuntime
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName
-import com.intel.inde.moe.natj.objc.ann.Property
-import com.intel.inde.moe.natj.objc.ann.Selector
+import com.intel.moe.natj.general.Pointer
+import com.intel.moe.natj.general.ann.RegisterOnStartup
+import com.intel.moe.natj.objc.ObjCRuntime
+import com.intel.moe.natj.objc.ann.ObjCClassName
+import com.intel.moe.natj.objc.ann.Property
+import com.intel.moe.natj.objc.ann.Selector
 import com.intel.samples.kotlincalculator.common.CalculatorAdapter
 import ios.NSObject
 import ios.uikit.UIButton
@@ -42,7 +42,7 @@ import ios.uikit.UIColor
 import ios.uikit.UILabel
 import ios.uikit.UIViewController
 
-@com.intel.inde.moe.natj.general.ann.Runtime(ObjCRuntime::class)
+@com.intel.moe.natj.general.ann.Runtime(ObjCRuntime::class)
 @ObjCClassName("CalcViewController")
 @RegisterOnStartup
 class CalcViewController protected constructor(peer: Pointer) : UIViewController(peer) {

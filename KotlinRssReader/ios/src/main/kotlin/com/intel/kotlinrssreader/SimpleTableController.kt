@@ -29,7 +29,7 @@
 
 package com.intel.kotlinrssreader
 
-import com.intel.inde.moe.natj.general.Pointer
+import com.intel.moe.natj.general.Pointer
 import ios.foundation.NSArray
 import ios.foundation.NSIndexPath
 import ios.uikit.UITableView
@@ -54,7 +54,7 @@ class SimpleTableController protected constructor(peer: Pointer) : UITableViewCo
         super.viewDidLoad()
 
         tableView().registerClassForCellReuseIdentifier(
-                com.intel.inde.moe.natj.objc.Class("UITableViewCell"),
+                com.intel.moe.natj.objc.Class("UITableViewCell"),
                 CELL_IDENTIFIER)
     }
 

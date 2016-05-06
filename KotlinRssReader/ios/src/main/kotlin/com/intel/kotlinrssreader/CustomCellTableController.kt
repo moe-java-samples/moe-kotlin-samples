@@ -29,7 +29,7 @@
 
 package com.intel.kotlinrssreader
 
-import com.intel.inde.moe.natj.general.Pointer
+import com.intel.moe.natj.general.Pointer
 import ios.foundation.NSIndexPath
 import ios.uikit.UITableView
 import ios.uikit.UITableViewCell

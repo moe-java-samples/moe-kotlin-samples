@@ -29,15 +29,15 @@
 
 package com.intel.kotlinrssreader
 
-import com.intel.inde.moe.natj.general.Pointer
-import com.intel.inde.moe.natj.general.ann.Generated
-import com.intel.inde.moe.natj.general.ann.Owned
-import com.intel.inde.moe.natj.general.ann.RegisterOnStartup
-import com.intel.inde.moe.natj.general.ann.Runtime
-import com.intel.inde.moe.natj.objc.ObjCRuntime
-import com.intel.inde.moe.natj.objc.ann.ObjCClassName
-import com.intel.inde.moe.natj.objc.ann.Property
-import com.intel.inde.moe.natj.objc.ann.Selector
+import com.intel.moe.natj.general.Pointer
+import com.intel.moe.natj.general.ann.Generated
+import com.intel.moe.natj.general.ann.Owned
+import com.intel.moe.natj.general.ann.RegisterOnStartup
+import com.intel.moe.natj.general.ann.Runtime
+import com.intel.moe.natj.objc.ObjCRuntime
+import com.intel.moe.natj.objc.ann.ObjCClassName
+import com.intel.moe.natj.objc.ann.Property
+import com.intel.moe.natj.objc.ann.Selector
 import ios.uikit.UILabel
 import ios.uikit.UITableViewCell
 import ios.uikit.UITextView

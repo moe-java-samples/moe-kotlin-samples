@@ -1,4 +1,5 @@
 buildscript {
+    ext.kotlin_version = '1.0.1-2'
     repositories {
         mavenCentral()
 
@@ -7,19 +8,30 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'org.intel.gradle:xRTGradlePlugin:1.0'
-        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.0+'
+        classpath 'com.intel.gradle:moeGradlePlugin:1.1.+'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
-apply plugin: 'xrt'
+apply plugin: 'moe'
 apply plugin: 'kotlin'
 
 dependencies {
     compile fileTree(dir: 'lib', include: '*.jar')
-    compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0-beta-4584'
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile project(':common')
 }
 
-xrt {
+moe {
+    xcode {
+        mainTarget 'Calculator'
+        companyIdentifier 'com.intel'
+        packageName 'com.intel.samples.kotlincalculator.ios'
+        appIconsSource 'AppIcon'
+        //infoPlistPath '' // Absolute path to Info.plist file. If this arg is not set new Info.plist will be generated.
+        applicationExitOnSuspend false
+        bundleShortVersionString '1.0'
+        bundleVersion '1'
+        deploymentTarget '9.0'
+    }
 }

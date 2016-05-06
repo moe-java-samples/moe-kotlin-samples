@@ -1,6 +1,6 @@
 package com.intel.kotlinmuseummap.ios.db
 
-import com.intel.inde.moe.natj.general.ptr.VoidPtr
+import com.intel.moe.natj.general.ptr.VoidPtr
 import com.intel.kotlinmuseummap.common.database.ISQLiteContentValues
 import com.intel.kotlinmuseummap.common.database.ISQLiteCursor
 import com.intel.kotlinmuseummap.common.database.ISQLiteDatabase
@@ -25,7 +25,7 @@ class SQLiteDatabase(private val dbHandle: VoidPtr?) : ISQLiteDatabase {
         }
         val sql = StringBuilder()
         sql.append("SELECT ")
-        if (columns == null || columns.size() == 0) {
+        if (columns == null || columns.size == 0) {
             sql.append("*")
         } else {
             for (`val` in columns) {
@@ -146,7 +146,7 @@ class SQLiteDatabase(private val dbHandle: VoidPtr?) : ISQLiteDatabase {
 
         // move all bind args to one array
         val setValuesSize = values!!.size()
-        val bindArgsSize = if ((whereArgs == null)) setValuesSize else (setValuesSize + whereArgs.size())
+        val bindArgsSize = if ((whereArgs == null)) setValuesSize else (setValuesSize + whereArgs.size)
         val bindArgs = arrayOfNulls<Any>(bindArgsSize)
         var i = 0
         for (colName in values!!.keySet()) {

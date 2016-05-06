@@ -1,8 +1,8 @@
 package com.intel.kotlinmuseummap.ios
 
-import com.intel.inde.moe.natj.general.Pointer
-import com.intel.inde.moe.natj.objc.SEL
-import com.intel.inde.moe.natj.objc.ann.Selector
+import com.intel.moe.natj.general.Pointer
+import com.intel.moe.natj.objc.SEL
+import com.intel.moe.natj.objc.ann.Selector
 import com.intel.kotlinmuseummap.common.MuseumSearchEngine
 import com.intel.kotlinmuseummap.common.model.Museum
 import com.intel.kotlinmuseummap.common.model.db.DataSource
@@ -31,7 +31,7 @@ class MuseumMapController protected constructor(peer: Pointer) : UIViewControlle
     private var source: DataSource? = null
 
     private val views :NSMutableDictionary<Any?, Any?> = NSMutableDictionary.alloc().init() as NSMutableDictionary<Any?, Any?>
-    private val constraints = NSMutableArray.alloc().init()
+    private val constraints :NSMutableArray<NSLayoutConstraint> = NSMutableArray.alloc().init() as NSMutableArray<NSLayoutConstraint>
 
     private val tfdelegate = object : UITextFieldDelegate {
 
@@ -137,17 +137,17 @@ class MuseumMapController protected constructor(peer: Pointer) : UIViewControlle
         view().addSubview(updatePinBtn)
 
         constraints.addObjectsFromArray(NSLayoutConstraint.constraintsWithVisualFormatOptionsMetricsViews("H:|-2-[pinLabel]-2-|",
-                0, null, views as NSDictionary<String, Any>))
+                0, null, views as NSDictionary<String, Any>) as NSArray<NSLayoutConstraint>)
         constraints.addObjectsFromArray(NSLayoutConstraint.constraintsWithVisualFormatOptionsMetricsViews("H:|-[updatePinBtn]-[addPinBtn]-[remPinBtn]-|",
-                0, null, views))
+                0, null, views) as NSArray<NSLayoutConstraint>)
         constraints.addObjectsFromArray(NSLayoutConstraint.constraintsWithVisualFormatOptionsMetricsViews("H:|-0-[map]-0-|",
-                0, null, views))
+                0, null, views) as NSArray<NSLayoutConstraint>)
         constraints.addObjectsFromArray(NSLayoutConstraint.constraintsWithVisualFormatOptionsMetricsViews("V:[topGuide]-[pinLabel]-[updatePinBtn]-[map]-0-[bottomGuide]",
-                0, null, views))
+                0, null, views) as NSArray<NSLayoutConstraint>)
         constraints.addObjectsFromArray(NSLayoutConstraint.constraintsWithVisualFormatOptionsMetricsViews("V:[topGuide]-[pinLabel]-[addPinBtn]-[map]-0-[bottomGuide]",
-                0, null, views))
+                0, null, views) as NSArray<NSLayoutConstraint>)
         constraints.addObjectsFromArray(NSLayoutConstraint.constraintsWithVisualFormatOptionsMetricsViews("V:[topGuide]-[pinLabel]-[remPinBtn]-[map]-0-[bottomGuide]",
-                0, null, views))
+                0, null, views) as NSArray<NSLayoutConstraint>)
 
         view().addConstraints(constraints as NSArray<NSLayoutConstraint>)
         view().layoutSubviews()

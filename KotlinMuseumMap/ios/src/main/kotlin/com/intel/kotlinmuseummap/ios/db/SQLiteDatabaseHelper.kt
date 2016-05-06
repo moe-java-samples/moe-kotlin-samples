@@ -1,8 +1,8 @@
 package com.intel.kotlinmuseummap.ios.db
 
-import com.intel.inde.moe.natj.general.ptr.Ptr
-import com.intel.inde.moe.natj.general.ptr.VoidPtr
-import com.intel.inde.moe.natj.general.ptr.impl.PtrFactory
+import com.intel.moe.natj.general.ptr.Ptr
+import com.intel.moe.natj.general.ptr.VoidPtr
+import com.intel.moe.natj.general.ptr.impl.PtrFactory
 import com.intel.kotlinmuseummap.common.core.Utils
 import com.intel.kotlinmuseummap.common.database.ISQLiteDatabase
 import com.intel.kotlinmuseummap.common.database.ISQLiteDatabaseHelper
