@@ -1,5 +1,11 @@
-Intel Multi-OS Engine Samples
-========================
+**Samples for open-sourced Multi-OS Engine were moved to https://github.com/multi-os-engine/moe-samples-kotlin**
+--------
+&nbsp;
+&nbsp;
+
+
+[DEPRECATED] Intel Multi-OS Engine Samples
+--------
 
 
 Overview
